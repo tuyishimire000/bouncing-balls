@@ -28,12 +28,11 @@ class Shape{
   }
 
 class Ball extends Shape {
-  exists;
     constructor(x, y, velX, velY, color, size) {
       super(x,y,velX,velY);
       this.color = color;
       this.size = size;
-      exists=true;
+      this.exists=true;
     }
     
 
@@ -165,10 +164,12 @@ while (balls.length <10) {
 
   balls.push(ball);
 }
+const pa= document.getElementById('ball-count');
+const evil= new EvilCircle(400,400);
 function loop() {
     ctx.fillStyle = "rgb(0 0 0 / 25%)";
     ctx.fillRect(0, 0, width, height);
-  const evil= new EvilCircle(4,5);
+ 
     for (const ball of balls) {
       
     
@@ -183,10 +184,10 @@ function loop() {
     evil.collisionDetect();
    
     }
-  
+    pa.innerHTML = `Ball count: ${balls.filter(ball => ball.exists).length}`;
     requestAnimationFrame(loop);
   }
-   const pa= document.getElementById('ball-count');
+
   
   
   loop();
