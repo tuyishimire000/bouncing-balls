@@ -30,3 +30,14 @@ p {
   right: 5px;
   color: #aaa;
 }
+.tu{
+width:fit-content;
+height: 60px;
+color:aliceblue;
+background-color: goldenrod;
+Font-size:54px;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+}
