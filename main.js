@@ -108,7 +108,7 @@ window.addEventListener("keydown", (e) => {
 
     draw() {
       ctx.beginPath();
-      lineWidth=3;
+      ctx.lineWidth=3;
       ctx.strokeStyle = this.color;
       ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
       ctx.stroke();
